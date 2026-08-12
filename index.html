@@ -1,176 +1,294 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>برني | BARNI</title>
+<title>برني | BARNI</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-    body {
-      background: #f5f1e8;
-      color: #25251f;
-      font-family: Arial, sans-serif;
-    }
+body{
+  background:#f5f1e8;
+  color:#25251f;
+  font-family:Arial,sans-serif;
+}
 
-    header {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 30px;
-    }
+header{
+  text-align:center;
+  padding:45px 20px 25px;
+}
 
-    .logo {
-      font-size: 64px;
-      letter-spacing: 8px;
-      font-weight: 700;
-    }
+.logo{
+  font-size:42px;
+  font-weight:bold;
+  letter-spacing:7px;
+}
 
-    .arabic {
-      font-size: 24px;
-      margin-top: 8px;
-    }
+.subtitle{
+  font-size:18px;
+  margin-top:8px;
+  color:#777064;
+}
 
-    .subtitle {
-      margin-top: 20px;
-      font-size: 16px;
-      opacity: 0.7;
-    }
+.container{
+  max-width:650px;
+  margin:auto;
+  padding:20px;
+}
 
-    .button {
-      margin-top: 35px;
-      padding: 15px 35px;
-      border: 1px solid #25251f;
-      color: #25251f;
-      text-decoration: none;
-      border-radius: 30px;
-      transition: 0.3s;
-    }
+h2{
+  margin:25px 0 15px;
+  font-size:25px;
+}
 
-    .button:hover {
-      background: #25251f;
-      color: #f5f1e8;
-    }
+.item{
+  background:#fffdf8;
+  border:1px solid #ddd6c8;
+  border-radius:18px;
+  padding:18px;
+  margin-bottom:14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    section {
-      padding: 80px 25px;
-      max-width: 900px;
-      margin: auto;
-    }
+.item h3{
+  font-size:19px;
+  margin-bottom:6px;
+}
 
-    h2 {
-      text-align: center;
-      font-size: 35px;
-      margin-bottom: 40px;
-    }
+.item p{
+  color:#777064;
+  font-size:14px;
+}
 
-    .menu {
-      display: grid;
-      gap: 15px;
-    }
+.price{
+  margin-top:8px;
+  font-weight:bold;
+}
 
-    .item {
-      background: #ebe5d8;
-      padding: 22px;
-      border-radius: 18px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+button{
+  border:0;
+  background:#25251f;
+  color:white;
+  padding:11px 17px;
+  border-radius:12px;
+  font-size:15px;
+}
 
-    .item h3 {
-      font-size: 19px;
-    }
+.cart{
+  background:#25251f;
+  color:white;
+  border-radius:20px;
+  padding:22px;
+  margin-top:30px;
+}
 
-    .item p {
-      margin-top: 6px;
-      opacity: 0.6;
-      font-size: 14px;
-    }
+.cart h2{
+  margin-top:0;
+}
 
-    .price {
-      font-weight: bold;
-      white-space: nowrap;
-    }
+.cart-item{
+  display:flex;
+  justify-content:space-between;
+  margin:10px 0;
+}
 
-    footer {
-      text-align: center;
-      padding: 50px 20px;
-      font-size: 14px;
-      opacity: 0.7;
-    }
-  </style>
+.total{
+  border-top:1px solid #666;
+  padding-top:15px;
+  margin-top:15px;
+  font-size:20px;
+  font-weight:bold;
+}
+
+input{
+  width:100%;
+  padding:15px;
+  border-radius:12px;
+  border:1px solid #bbb;
+  margin:8px 0 12px;
+  font-size:16px;
+}
+
+.order{
+  width:100%;
+  background:#d8a24a;
+  color:#25251f;
+  font-weight:bold;
+  margin-top:15px;
+}
+
+footer{
+  text-align:center;
+  padding:40px 20px;
+  color:#777064;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">BARNI</div>
-    <div class="arabic">برني</div>
+<header>
+  <div class="logo">BARNI</div>
+  <div class="subtitle">برني</div>
+  <p class="subtitle">قهوة • تمر • لحظات جميلة</p>
+</header>
 
-    <div class="subtitle">
-      قهوة • تمر • لحظات جميلة
-    </div>
+<div class="container">
 
-    <a href="#menu" class="button">
-      شاهد المنيو
-    </a>
-  </header>
+<h2>☕ القهوة</h2>
 
-  <section id="menu">
+<div class="item">
+  <div>
+    <h3>لاتيه</h3>
+    <p>إسبريسو مع حليب كريمي</p>
+    <div class="price">1.500 ر.ع</div>
+  </div>
+  <button onclick="addItem('لاتيه',1.5)">إضافة</button>
+</div>
 
-    <h2>المنيو</h2>
+<div class="item">
+  <div>
+    <h3>أمريكانو</h3>
+    <p>إسبريسو مع ماء ساخن</p>
+    <div class="price">1.200 ر.ع</div>
+  </div>
+  <button onclick="addItem('أمريكانو',1.2)">إضافة</button>
+</div>
 
-    <div class="menu">
+<h2>🌴 التمر</h2>
 
-      <div class="item">
-        <div>
-          <h3>لاتيه</h3>
-          <p>إسبريسو وحليب ناعم</p>
-        </div>
-        <div class="price">1.500 ر.ع</div>
+<div class="item">
+  <div>
+    <h3>تمر برني</h3>
+    <p>تمر برني فاخر</p>
+    <div class="price">1.000 ر.ع</div>
+  </div>
+  <button onclick="addItem('تمر برني',1)">إضافة</button>
+</div>
+
+<div class="item">
+  <div>
+    <h3>قهوة وتمر</h3>
+    <p>قهوة مع تمر برني</p>
+    <div class="price">2.000 ر.ع</div>
+  </div>
+  <button onclick="addItem('قهوة وتمر',2)">إضافة</button>
+</div>
+
+<div class="cart">
+
+<h2>🛒 طلبك</h2>
+
+<div id="cart"></div>
+
+<div class="total">
+المجموع: <span id="total">0.000</span> ر.ع
+</div>
+
+<input id="table" type="number" placeholder="رقم الطاولة">
+
+<button class="order" onclick="sendOrder()">
+إرسال الطلب
+</button>
+
+</div>
+
+</div>
+
+<footer>
+BARNI • برني<br>
+قهوة وتمرة ولحظات جميلة
+</footer>
+
+<script>
+
+let cart = [];
+
+function addItem(name, price){
+
+  cart.push({
+    name:name,
+    price:price
+  });
+
+  updateCart();
+}
+
+function updateCart(){
+
+  let cartDiv = document.getElementById("cart");
+  let total = 0;
+
+  cartDiv.innerHTML = "";
+
+  cart.forEach((item,index)=>{
+
+    total += item.price;
+
+    cartDiv.innerHTML += `
+      <div class="cart-item">
+        <span>${item.name}</span>
+        <span>${item.price.toFixed(3)} ر.ع</span>
       </div>
+    `;
 
-      <div class="item">
-        <div>
-          <h3>سبانش لاتيه</h3>
-          <p>قهوة وحليب بنكهة غنية</p>
-        </div>
-        <div class="price">1.700 ر.ع</div>
-      </div>
+  });
 
-      <div class="item">
-        <div>
-          <h3>أمريكانو</h3>
-          <p>إسبريسو مع الماء</p>
-        </div>
-        <div class="price">1.200 ر.ع</div>
-      </div>
+  document.getElementById("total").innerText =
+    total.toFixed(3);
+}
 
-      <div class="item">
-        <div>
-          <h3>تمر برني</h3>
-          <p>تمر برني مختار بعناية</p>
-        </div>
-        <div class="price">1.000 ر.ع</div>
-      </div>
+function sendOrder(){
 
-    </div>
+  if(cart.length === 0){
+    alert("أضف منتجًا إلى الطلب أولًا");
+    return;
+  }
 
-  </section>
+  let table =
+    document.getElementById("table").value;
 
-  <footer>
-    BARNI CAFÉ — QURAYYAT, OMAN
-  </footer>
+  if(!table){
+    alert("اكتب رقم الطاولة");
+    return;
+  }
+
+  let message = "طلب جديد من برني ☕🌴%0A%0A";
+
+  cart.forEach(item=>{
+    message +=
+      "• " + item.name +
+      " - " + item.price.toFixed(3) +
+      " ر.ع%0A";
+  });
+
+  let total =
+    cart.reduce((sum,item)=>sum + item.price,0);
+
+  message +=
+    "%0Aرقم الطاولة: " + table +
+    "%0Aالمجموع: " +
+    total.toFixed(3) +
+    " ر.ع";
+
+  let phone = "968XXXXXXXX";
+
+  window.open(
+    "https://wa.me/" + phone +
+    "?text=" + message,
+    "_blank"
+  );
+}
+
+</script>
 
 </body>
 </html>
