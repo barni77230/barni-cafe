@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>برني | BARNI</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f5f1e8;
+      color: #25251f;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .logo {
+      font-size: 64px;
+      letter-spacing: 8px;
+      font-weight: 700;
+    }
+
+    .arabic {
+      font-size: 24px;
+      margin-top: 8px;
+    }
+
+    .subtitle {
+      margin-top: 20px;
+      font-size: 16px;
+      opacity: 0.7;
+    }
+
+    .button {
+      margin-top: 35px;
+      padding: 15px 35px;
+      border: 1px solid #25251f;
+      color: #25251f;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #25251f;
+      color: #f5f1e8;
+    }
+
+    section {
+      padding: 80px 25px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 35px;
+      margin-bottom: 40px;
+    }
+
+    .menu {
+      display: grid;
+      gap: 15px;
+    }
+
+    .item {
+      background: #ebe5d8;
+      padding: 22px;
+      border-radius: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .item h3 {
+      font-size: 19px;
+    }
+
+    .item p {
+      margin-top: 6px;
+      opacity: 0.6;
+      font-size: 14px;
+    }
+
+    .price {
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">BARNI</div>
+    <div class="arabic">برني</div>
+
+    <div class="subtitle">
+      قهوة • تمر • لحظات جميلة
+    </div>
+
+    <a href="#menu" class="button">
+      شاهد المنيو
+    </a>
+  </header>
+
+  <section id="menu">
+
+    <h2>المنيو</h2>
+
+    <div class="menu">
+
+      <div class="item">
+        <div>
+          <h3>لاتيه</h3>
+          <p>إسبريسو وحليب ناعم</p>
+        </div>
+        <div class="price">1.500 ر.ع</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <h3>سبانش لاتيه</h3>
+          <p>قهوة وحليب بنكهة غنية</p>
+        </div>
+        <div class="price">1.700 ر.ع</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <h3>أمريكانو</h3>
+          <p>إسبريسو مع الماء</p>
+        </div>
+        <div class="price">1.200 ر.ع</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <h3>تمر برني</h3>
+          <p>تمر برني مختار بعناية</p>
+        </div>
+        <div class="price">1.000 ر.ع</div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    BARNI CAFÉ — QURAYYAT, OMAN
+  </footer>
+
+</body>
+</html>
